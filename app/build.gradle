@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    //buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.xmamiga.btrecord"
+        minSdkVersion 18
+        targetSdkVersion 26
+        versionCode 3
+        versionName "1.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false // 是否混淆
+            shrinkResources false // 是否去除无效的资源文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true  //zipAlign优化
+//            buildConfigField "boolean", "LOG_DEBUG", "false"//关闭调试log
+        }
+
+        debug {
+            // 显示Log
+//            buildConfigField "boolean", "LOG_DEBUG", "true"
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = outputFile.name.replace("app-release",
+                        "BTRecord" + "_V${defaultConfig.versionName}_${getDate()}")
+                outputFileName = fileName
+            }
+        }
+    }
+}
+
+//获取时间戳
+def getDate() {
+    return new Date().format('MMddHHmm')
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+
+    implementation project(':xxhander')
+}

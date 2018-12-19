@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">录音</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="main_title">录音测试</string>
+
+    <string name="txt_start_recording">开始录音</string>
+    <string name="txt_stop_recording">停止录音</string>
+    <string name="txt_play_sound_recording">播放录音</string>
+    <string name="txt_release_sound_recording">停止播放</string>
+
+    <string name="tip_start_recording">\n开始录音...</string>
+    <string name="tip_stop_recording">\n停止录音...</string>
+    <string name="tip_cannot_start_recording">\n正在录音中，请先停止录音...</string>
+    <string name="tip_cannot_stop_recording">\n当前没有在录音...</string>
+
+    <string name="tip_start_sound_recording">\n开始播放录音文件...</string>
+    <string name="tip_stop_sound_recording">\n停止播放录音文件...</string>
+    <string name="tip_complete_sound_recording">\n已完成播放完录音文件...</string>
+    <string name="tip_cannot_start_sound_recording">\n正在播放录音文件，请先暂停播放录音...</string>
+    <string name="tip_cannot_stop_sound_recording">\n当前没有在播放录音文件...</string>
+    <string name="tip_no_file_to_play">\n当前没有可播放的文件</string>
+
+    <string name="tip_sys_nosupport_bluetooth_recording">\n系统不支持蓝牙录音</string>
+    <string name="tip_sys_support_bluetooth_recording">\n系统支持蓝牙录音</string>
+
+    <string name="tip_please_connect_to_bluetooth_headset">\n请先打开蓝牙，连接蓝牙耳机...</string>
+    <string name="tip_bluetooth_connected">\n已连接蓝牙...</string>
+    <string name="tip_bluetooth_disconnected">\n已断开蓝牙...</string>
+
+    <string name="tip_record_file_address">录音文件地址:%1$s\n\n即SD卡下%2$s目录%3$s文件\n\n(蓝牙耳机暂停按钮可开始、暂停录音)</string>
+    <string name="tip_record_file_address_1">录音文件地址:当前无录音文件\n\n录音文件保存在%s目录下\n\n(蓝牙耳机暂停按钮可开始、暂停录音)</string>
+
+</resources>
